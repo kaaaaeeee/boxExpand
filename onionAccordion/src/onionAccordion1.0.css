@@ -1,0 +1,7 @@
+.ab-ui-accordion .ab-ui-accordion-contents {
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+.ab-ui-accordion + .ab-ui-accordion-show .ab-ui-accordion-contents {
+  height: auto;
+}
