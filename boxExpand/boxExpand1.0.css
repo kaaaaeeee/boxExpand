@@ -1,0 +1,55 @@
+.boxExpand .boxExpand-cloak {
+  overflow: hidden;
+  transition: 0.3s ease-out;
+}
+
+.boxExpand.boxExpand-show .boxExpand-cloak {
+  height: auto;
+}
+
+.boxExpand-contents-fadeout.boxExpand .boxExpand-cloak {
+  position: relative;
+  background: #fff;
+}
+
+.boxExpand-contents-fadeout.boxExpand .boxExpand-cloak::after {
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 80%);
+}
+
+.boxExpand-contents-fadeout.boxExpand.boxExpand-show .boxExpand-cloak::after {
+  display: none;
+}
+
+.boxExpand-trigger-arrow.boxExpand .boxExpand-triggerBtn {
+  position: relative;
+  padding-right: 20px;
+}
+
+.boxExpand-trigger-arrow.boxExpand .boxExpand-triggerBtn::after {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin-top: -8px;
+  border: solid  #222;
+  border-width: 0 1px 1px 0;
+  content: "";
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  transition: all 0.3s ease-out;
+}
+
+.boxExpand-trigger-arrow.boxExpand.boxExpand-open .boxExpand-triggerBtn::after, .boxExpand-trigger-arrow.boxExpand.boxExpand-show .boxExpand-triggerBtn::after {
+  margin-top: -3px;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
