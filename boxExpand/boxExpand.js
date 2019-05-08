@@ -1,9 +1,15 @@
+/**
+ * boxExpand
+ * version: 1.0
+ */
+
 (function () {
+  'use strict';
   // boxExpand
   var namespace = 'boxExpand';
-  var expand = window.expand || {};
+  var Expand = window.expand || {};
 
-  expand = function ($self, method) {
+  Expand = function ($self, method) {
     var self = this;
     self.defaults = {
       closeHeight: '0px',
@@ -11,7 +17,8 @@
       callback: {
         initializeAfter: null,
         showAfter: null,
-        hideAfter: null
+        hideAfter: null,
+        scrollAfter: null
       },
       type: {
         content: 'default', // 'default' or 'fadeout'
@@ -66,7 +73,7 @@
     return self;
   };
 
-  expand.prototype.initialize = function () {
+  Expand.prototype.initialize = function () {
     var self = this;
     var options = self.options;
     var $expand = self.$expand;
@@ -79,19 +86,23 @@
     options.$trigger.on('click.' + namespace, function (e) {
       e.preventDefault();
       if (options.isShow) {
-        self.closeAcco();
+        self.closeBox();
       } else {
-        self.openAcco();
+        self.openBox();
       }
     });
 
     self.activeCallback('initializeAfter');
+    $expand.trigger('boxExpandInit',[self]);
   };
 
-  expand.prototype.openAcco = function () {
+  Expand.prototype.openBox = function () {
     var self = this;
     var $expand = self.$expand;
     var options = self.options;
+    if (options.isShow) {
+      return;
+    }
     var contentsHeight = options.$contents.outerHeight();
 
     $expand.toggleClass(options.openClass, true);
@@ -105,13 +116,17 @@
         $expand.toggleClass(options.showClass, true);
         options.isShow = true;
         self.activeCallback('showAfter');
+        $expand.trigger('boxExpandShow',[self]);
       });
   };
 
-  expand.prototype.closeAcco = function () {
+  Expand.prototype.closeBox = function () {
     var self = this;
     var $expand = self.$expand;
     var options = self.options;
+    if (!options.isShow) {
+      return;
+    }
     var contentsHeight = options.$contents.outerHeight();
     var scrollPosition = $expand.offset().top + ($(window).height() / 2);
 
@@ -123,6 +138,7 @@
         options.$cloak.css('height', options.closeHeight).dequeue();
         options.isShow = false;
         self.activeCallback('hideAfter');
+        $expand.trigger('boxExpandHide',[self]);
       });
 
     // 移動
@@ -133,10 +149,14 @@
       }
       $('html, body').stop().animate({
         scrollTop: scrollPosition
-      }, 300, function () {});
+      }, 300, function () {
+        self.activeCallback('scrollAfter');
+        $expand.trigger('boxExpandScroll',[self]);
+      });
     }
   };
-  expand.prototype.textChange = function (isShow) {
+
+  Expand.prototype.textChange = function (isShow) {
     var self = this;
     var options = self.options;
     if (isShow) {
@@ -144,10 +164,9 @@
     } else {
       options.$triggerText.text(options.triggerTextData.show);
     }
-
   };
 
-  expand.prototype.activeCallback = function (callbackName) {
+  Expand.prototype.activeCallback = function (callbackName) {
     var self = this;
     var options = self.options;
     if (typeof options.callback[callbackName] === 'function') {
@@ -155,7 +174,7 @@
     }
   };
 
-  expand.prototype.destroy = function () {
+  Expand.prototype.destroy = function () {
     var self = this;
     var $expand = self.$expand;
     var options = self.options;
@@ -185,10 +204,21 @@
     return hoge;
   }
 
-  $.fn[namespace] = function (method) {
-    return this.each(function () {
-      var $this = $(this);
-      $this.data(namespace, new expand($this, method));
-    });
-  };
+  $.fn[namespace] = function() {
+    var self = this,
+        opt = arguments[0],
+        args = Array.prototype.slice.call(arguments, 1),
+        l = self.length,
+        i,
+        ret;
+    for (i = 0; i < l; i++) {
+        if (typeof opt == 'object' || typeof opt == 'undefined') {
+            self[i][namespace] = new Expand($(this), opt);
+        } else {
+            ret = self[i][namespace][opt].apply(self[i][namespace], args);
+            if (typeof ret != 'undefined') return ret;
+        }
+    }
+    return self;
+};
 })();

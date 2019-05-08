@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>boxExpand</title>
   <link media="all" type="text/css" rel="stylesheet" href="src/css/reset.css">
-  <link media="all" type="text/css" rel="stylesheet" href="boxExpand/boxExpand1.0.css">
+  <link media="all" type="text/css" rel="stylesheet" href="boxExpand/boxExpand.css">
   <link media="all" type="text/css" rel="stylesheet" href="src/css/accordion.css">
 </head>
 
@@ -69,11 +69,15 @@
     <div class="dummy-contents">スクロールを出したいダミーのコンテンツ</div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="boxExpand/boxExpand1.0.js"></script>
+  <script src="boxExpand/boxExpand.js"></script>
   <script>
     (function () {
       $('.boxExpand').each(function () {
         if ($(this).hasClass('00x-accordion-fadeout')) {
+          $(this).on('boxExpandInit', function (event, boxExpand) {
+            console.log('*** boxexpandinit ***');
+            console.log(boxExpand);
+          });
           $(this).boxExpand({
             closeHeight: '8em',
             isScrollAnimation: true

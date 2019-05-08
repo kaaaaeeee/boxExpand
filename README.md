@@ -17,6 +17,27 @@
 |triggerArrowClass||string|'boxExpand-trigger-arrow'||
 |type|content|string|'default'|'default' or 'fadeout'|
 ||trigger|string|'default'|'default' or 'arrow'|
-|callback|initializeAfter|function|null||
+|callback|initAfter|function|null||
 ||showAfter|function|null||
 ||hideAfter|function|null||
+||scrollAfter|function|null||
+
+## event
+```
+$('.boxExpand').on('boxExpandShow', function (event, boxExoand) {
+  console.log(boxExpand);
+});
+```
+- boxExpandInit
+- boxExpandShow
+- boxExpandHide
+- boxExpandScroll
+
+## method
+```
+$('.boxExpand').boxExpand('openBox');
+```
+
+- destroy
+- openBox
+- closeBox
