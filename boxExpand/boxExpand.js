@@ -1,7 +1,9 @@
 /**
- * boxExpand
- * version: 1.0
- */
+ * boxExpand v1.0 - https://github.com/kaaaaeeee/boxExpand
+ * Copyright (c) Copyright (c) 2019 kae kobayashi
+ * This software is released under the MIT License.
+ * http://opensource.org/licenses/mit-license.php
+*/
 
 (function () {
   'use strict';

@@ -41,3 +41,8 @@ $('.boxExpand').boxExpand('openBox');
 - destroy
 - openBox
 - closeBox
+
+
+## License
+Copyright (c) 2019 kae kobayashi
+ Licensed under the MIT License, see LICENSE.txt.
