@@ -13,6 +13,10 @@ body {
   font-size: 18px;
 }
 
+.boxExpand + .dummy-lead {
+  margin-top: 30px;
+}
+
 .dummy-contents {
   height: 800px;
   padding: 20px 10px;

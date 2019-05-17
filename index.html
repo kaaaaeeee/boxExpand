@@ -15,23 +15,33 @@
   <div id="wrapper">
     <h1>boxExpand</h1>
     <section>
-      <h2 class="dummy-title">通常のアコーディオン</h2>
-      <div class="boxExpand boxExpand-show">
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="open">close</span></a></p>
-        <div class="boxExpand-contents">
-          <p class="dummy-text">内容だよ</p>
-        </div>
-      </div>
+      <h2 class="dummy-title">デフォルト</h2>
       <div class="boxExpand">
         <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="閉じる">開く</span></a></p>
         <div class="boxExpand-contents">
           <p class="dummy-text">内容だよ</p>
         </div>
       </div>
+
+      <div class="dummy-lead">
+        <p class="dummy-text">rootに<em>boxExpand-show</em>のクラスを付与すると、デフォルトが開いた状態になる。</p>
+      </div>
+      <div class="boxExpand boxExpand-show">
+        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="open">close</span></a></p>
+        <div class="boxExpand-contents">
+          <p class="dummy-text">内容だよ</p>
+        </div>
+      </div>
+
+      <pre>
+        <code>
+          $('.boxExpand').boxExpand();
+        </code>
+      </pre>
     </section>
     <section>
-      <h2 class="dummy-title">ちら見えるアコーディオン</h2>
-      <div class="boxExpand boxExpand-show 00x-accordion-fadeout">
+      <h2 class="dummy-title">closeHeightを指定</h2>
+      <div class="boxExpand 00x-accordion-fadeout">
         <div class="boxExpand-contents">
           <p class="dummy-text-long">
             この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
@@ -39,6 +49,16 @@
         </div>
         <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText">toggle</span></a></p>
       </div>
+      <pre>
+        <code>
+          $('.boxExpand').boxExpand({
+            closeHeight: 'calc(2em + 10px)',
+          });
+        </code>
+      </pre>
+    </section>
+    <section>
+      <h2 class="dummy-title">isScrollAnimationを設定</h2>
       <div class="boxExpand 00x-accordion-fadeout2">
         <div class="boxExpand-contents">
           <p class="dummy-text-long">
@@ -47,6 +67,14 @@
         </div>
         <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="hide">show</span></a></p>
       </div>
+      <pre>
+        <code>
+          $('.boxExpand').boxExpand({
+            closeHeight: '8em',
+            isScrollAnimation: true
+          });
+        </code>
+      </pre>
     </section>
     <section>
       <h2 class="dummy-title">design option</h2>
@@ -79,12 +107,12 @@
             console.log(boxExpand);
           });
           $(this).boxExpand({
-            closeHeight: '8em',
-            isScrollAnimation: true
+            closeHeight: 'calc(2em + 10px)',
           });
         } else if ($(this).hasClass('00x-accordion-fadeout2')) {
           $(this).boxExpand({
-            closeHeight: 'calc(2em + 10px)',
+            closeHeight: '8em',
+            isScrollAnimation: true,
             callback: {
               showAfter: function () {
                 console.log('show!!');
