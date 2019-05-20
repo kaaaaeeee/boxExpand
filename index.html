@@ -14,87 +14,332 @@
 <body>
   <div id="wrapper">
     <h1>boxExpand</h1>
-    <section>
-      <h2 class="dummy-title">デフォルト</h2>
-      <div class="boxExpand">
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="閉じる">開く</span></a></p>
-        <div class="boxExpand-contents">
-          <p class="dummy-text">内容だよ</p>
+    <section id="sample">
+      <h2 class="dummy-title">サンプル</h2>
+      <section class="dummy-item">
+        <h3 class="dummy-contentTitle">デフォルト</h3>
+        <div class="boxExpand">
+          <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="閉じる">開く</span></a></p>
+          <div class="boxExpand-contents">
+            <p class="dummy-text">内容だよ</p>
+          </div>
         </div>
-      </div>
 
-      <div class="dummy-lead">
-        <p class="dummy-text">rootに<em>boxExpand-show</em>のクラスを付与すると、デフォルトが開いた状態になる。</p>
-      </div>
-      <div class="boxExpand boxExpand-show">
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="open">close</span></a></p>
-        <div class="boxExpand-contents">
-          <p class="dummy-text">内容だよ</p>
+        <div class="dummy-lead">
+          <p class="dummy-text">rootに<em>boxExpand-show</em>のクラスを付与すると、デフォルトが開いた状態になる。</p>
         </div>
-      </div>
-
-      <pre>
-        <code>
-          $('.boxExpand').boxExpand();
-        </code>
-      </pre>
+        <div class="boxExpand boxExpand-show">
+          <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="open">close</span></a></p>
+          <div class="boxExpand-contents">
+            <p class="dummy-text">内容だよ</p>
+          </div>
+        </div>
+        <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').boxExpand();
+</code>
+</pre>
+        </div>
+      </section>
+      <section class="dummy-item">
+        <h3 class="dummy-contentTitle">closeHeight</h3>
+        <div class="boxExpand 00x-accordion-fadeout">
+          <div class="boxExpand-contents">
+            <p class="dummy-text-long">
+              この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
+            </p>
+          </div>
+          <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText">toggle</span></a></p>
+        </div>
+        <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').boxExpand({
+  closeHeight: 'calc(2em + 10px)'
+});
+</code>
+</pre>
+        </div>
+      </section>
+      <section class="dummy-item">
+        <h3 class="dummy-contentTitle">isScrollAnimation</h3>
+        <div class="dummy-lead">
+          <p class="dummy-text"><em>isScrollAnimation: true</em>を設定すると閉じる時にトリガーボタンを画面中央に表示し続けるようscrollAnimationをつける</p>
+        </div>
+        <div class="boxExpand 00x-accordion-fadeout2">
+          <div class="boxExpand-contents">
+            <p class="dummy-text-long">
+              この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
+            </p>
+          </div>
+          <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="hide">show</span></a></p>
+        </div>
+        <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').boxExpand({
+  closeHeight: '8em',
+  isScrollAnimation: true
+});
+</code>
+</pre>
+        </div>
+      </section>
+      <section class="dummy-item">
+        <h3 class="dummy-contentTitle">type</h3>
+        <div class="dummy-lead">
+          <p class="dummy-text"><em>content: 'fadeout'</em>を設定すると閉じた時にコンテンツにグラデーションをつける</p>
+        </div>
+        <div class="boxExpand 00x-accordion-fadeout3">
+          <div class="boxExpand-contents">
+            <p class="dummy-text-long">
+              この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
+            </p>
+          </div>
+          <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="fadeout close">fadeout open</span></a></p>
+        </div>
+        <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').boxExpand({
+  closeHeight: '80px',
+  type: {
+    content: 'fadeout'
+  },
+  isScrollAnimation: true
+});
+</code>
+</pre>
+        </div>
+        <div class="dummy-lead">
+          <p class="dummy-text"><em>trigger: 'arrow'</em>を設定すると矢印を追加する</p>
+        </div>
+        <div class="boxExpand 00x-accordion-arrow1">
+          <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="arrow close">arrow open</span></a></p>
+          <div class="boxExpand-contents">
+            <p class="dummy-text">内容だよ</p>
+          </div>
+        </div>
+        <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').boxExpand({
+  type: {
+    trigger: 'arrow'
+  }
+});
+</code>
+</pre>
+        </div>
+      </section>
     </section>
-    <section>
-      <h2 class="dummy-title">closeHeightを指定</h2>
-      <div class="boxExpand 00x-accordion-fadeout">
-        <div class="boxExpand-contents">
-          <p class="dummy-text-long">
-            この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
-          </p>
-        </div>
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText">toggle</span></a></p>
-      </div>
-      <pre>
-        <code>
-          $('.boxExpand').boxExpand({
-            closeHeight: 'calc(2em + 10px)',
-          });
-        </code>
-      </pre>
+    <section id="setting">
+        <h2 class="dummy-title">setting</h2>
+        <section>
+          <div class="dummy-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>オプション</th>
+                  <th></th>
+                  <th>type</th>
+                  <th>初期値</th>
+                  <th>説明</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>closeHeight</td>
+                  <td></td>
+                  <td>string</td>
+                  <td>'0px'</td>
+                  <td>閉じたときに見せるコンテンツの高さ</td>
+                </tr>
+                <tr>
+                  <td>isScrollAnimation</td>
+                  <td></td>
+                  <td>boolean</td>
+                  <td>false</td>
+                  <td>閉じる時にスクロールアニメーションをつける</td>
+                </tr>
+                <tr>
+                  <td>showClass</td>
+                  <td></td>
+                  <td>string</td>
+                  <td>'boxExpand-show'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>openClass</td>
+                  <td></td>
+                  <td>string</td>
+                  <td>'boxExpand-open'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>contentCloakClass</td>
+                  <td></td>
+                  <td>string</td>
+                  <td>'boxExpand-cloak'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>contentFadeoutClass</td>
+                  <td></td>
+                  <td>string</td>
+                  <td>'boxExpand-contents-fadeout'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>triggerArrowClass</td>
+                  <td></td>
+                  <td>string</td>
+                  <td>'boxExpand-trigger-arrow'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>type</td>
+                  <td>content</td>
+                  <td>string</td>
+                  <td>'default'</td>
+                  <td>'default' or 'fadeout'</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>trigger</td>
+                  <td>string</td>
+                  <td>'default'</td>
+                  <td>'default' or 'arrow'</td>
+                </tr>
+                <tr>
+                  <td>callback</td>
+                  <td>initAfter</td>
+                  <td>function</td>
+                  <td>null</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>showAfter</td>
+                  <td>function</td>
+                  <td>null</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>hideAfter</td>
+                  <td>function</td>
+                  <td>null</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>scrollAfter</td>
+                  <td>function</td>
+                  <td>null</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
     </section>
-    <section>
-      <h2 class="dummy-title">isScrollAnimationを設定</h2>
-      <div class="boxExpand 00x-accordion-fadeout2">
-        <div class="boxExpand-contents">
-          <p class="dummy-text-long">
-            この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
-          </p>
-        </div>
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="hide">show</span></a></p>
-      </div>
-      <pre>
-        <code>
-          $('.boxExpand').boxExpand({
-            closeHeight: '8em',
-            isScrollAnimation: true
-          });
-        </code>
-      </pre>
+    <section id="evet">
+        <h2 class="dummy-title">event</h2>
+        <section class="dummy-item">
+          <div class="dummy-lead">
+            <p class="dummy-text">後からイベント追加する。<br><em>セッティングのコールバックより後</em>に実行される。</p>
+          </div>
+          <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').on('boxExpandShow', function (event, boxExoand) {
+  console.log(boxExpand);
+});
+</code>
+</pre>
+          </div>
+          <div class="dummy-table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>オプション名</th>
+                    <th>引数</th>
+                    <th>内容</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>boxExpandInit</td>
+                    <td>event, boxExpand</td>
+                    <td>初期設定後実行される</td>
+                  </tr>
+                  <tr>
+                    <td>boxExpandShow</td>
+                    <td>event, boxExpand</td>
+                    <td>アコーディオンを開いた後、実行される</td>
+                  </tr>
+                  <tr>
+                    <td>boxExpandHide</td>
+                    <td>event, boxExpand</td>
+                    <td>アコーディオンを閉じた後、実行される</td>
+                  </tr>
+                  <tr>
+                    <td>boxExpandScroll</td>
+                    <td>event, boxExpand</td>
+                    <td>isScrollAnimationがtrueに設定されていた時、アコーディオンを閉じた後スクロールアニメーションして実行される</td>
+                  </tr>
+                  </tbody>
+              </table>
+            </div>
+        </section>
     </section>
-    <section>
-      <h2 class="dummy-title">design option</h2>
-      <div class="boxExpand 00x-accordion-fadeout3">
-        <div class="boxExpand-contents">
-          <p class="dummy-text-long">
-            この内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよこの内容はとても長い内容だよ内容だよ内容だよ内容だよ内容だよ
-          </p>
+    <section id="method">
+      <h2 class="dummy-title">method</h2>
+      <section class="dummy-item">
+        <div class="dummy-lead">
+          <p class="dummy-text">外部から実行できるメソッド</p>
         </div>
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="fadeout close">fadeout open</span></a></p>
-      </div>
-      <div class="boxExpand 00x-accordion-arrow1">
-        <p class="boxExpand-trigger"><a class="boxExpand-triggerBtn" href="#"><span class="boxExpand-triggerText" boxExpand-toggle-text="arrow close">arrow open</span></a></p>
-        <div class="boxExpand-contents">
-          <p class="dummy-text">内容だよ</p>
+        <div class="dummy-code">
+<pre>
+<code>
+$('.boxExpand').boxExpand('openBox');
+</code>
+</pre>
         </div>
-      </div>
+        <div class="dummy-table">
+          <table>
+            <thead>
+              <tr>
+                <th>オプション名</th>
+                <th>内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>destroy</td>
+                <td>全てを削除する</td>
+              </tr>
+              <tr>
+                <td>openBox</td>
+                <td>アコーディオンを開く</td>
+              </tr>
+              <tr>
+                <td>closeBox</td>
+                <td>アコーディオンを閉じる</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </section>
-
-    <div class="dummy-contents">スクロールを出したいダミーのコンテンツ</div>
+    <section id="method">
+        <h2 class="dummy-title">git</h2>
+        <section class="dummy-item">
+          <p class="dummy-button"><a href="https://github.com/kaaaaeeee/boxExpand"><span>github</span></a></p>
+        </section>
+      </section>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="boxExpand/boxExpand.js"></script>

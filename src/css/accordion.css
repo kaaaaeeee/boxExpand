@@ -1,28 +1,51 @@
-body {
-  line-height: 1.4;
+html {
+  font-size: 62.5%;
 }
 #wrapper {
-  max-width: 800px;
+  max-width: 760px;
   width: 100%;
-  margin: 10px auto;
+  margin: 0 auto;
+  padding: 40px 0;
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 .dummy-title {
-  margin-top: 20px;
-  padding: 10px 5px;
-  font-size: 18px;
+  font-size: 2rem;
+  text-align: center;
 }
-
-.boxExpand + .dummy-lead {
+#wrapper > section {
+  margin-top: 50px;
+}
+.dummy-item {
+  margin-top: 40px;
+}
+.dummy-title + .dummy-item {
+  margin-top: 10px;
+}
+.dummy-contentTitle {
+  font-size: 1.6rem;
+}
+.dummy-lead {
+  margin-top: 20px;
+}
+.boxExpand + .dummy-lead,
+.dummy-code + .dummy-lead {
   margin-top: 30px;
 }
 
-.dummy-contents {
-  height: 800px;
-  padding: 20px 10px;
-  background: #efe;
+.dummy-lead .dummy-text em {
+  font-style: normal;
+  font-weight: bold;
 }
 
+.dummy-code {
+  margin-top: 10px;
+  padding: 0 10px;
+  background: #555;
+  color: #fff;
+  line-height: 1.8;
+}
 .boxExpand {
   margin-top: 20px;
 }
@@ -36,12 +59,14 @@ body {
 }
 
 .boxExpand .boxExpand-triggerBtn:hover {
-  opacity: 0.7;
+  background: #e7a;
 }
-
+.boxExpand .boxExpand-cloak {
+  border: 1px solid #eac;
+}
 .boxExpand .boxExpand-contents {
   padding: 10px;
-  background: #abd;
+  background: #fff;
 }
 
 .boxExpand .boxExpand-background {
@@ -49,5 +74,35 @@ body {
 }
 
 .boxExpand .dummy-text-long {
-  font-size: 12px;
+  line-height: 1.6;
+  font-size: 1.2rem;
+}
+
+.dummy-table {
+  margin-top: 30px;
+}
+.dummy-table th,
+.dummy-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+}
+.dummy-table th {
+  text-align: left;
+  border-bottom-width: 2px;
+  border-color: #333;
+}
+
+.dummy-button a {
+  display: block;
+  max-width: 200px;
+  margin: 10px auto 0;
+  background: #eac;
+  color: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+  text-decoration: none;
+  line-height: 30px;
+}
+.dummy-button a:hover {
+  background: #e7a;
 }
